@@ -4,5 +4,10 @@ namespace MultipleProjectTest;
 
 public partial class Root : Node
 {
-	[Export] private ContextClone _context;
+	[Export] private ContextToAttach _context;
+
+	public override void _Ready()
+	{
+		_context.ToLogic().Initialize();
+	}
 }

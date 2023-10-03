@@ -1,13 +1,15 @@
-﻿using Godot;
+﻿using System.Reactive;
+using Godot;
 
 namespace ClassLibrary1;
 
-public partial class Context : Sprite2D
+public class Context
 {
-    [Export] public Sprite2D Sprite { get; private set; }
-    
-    public override void _Process(double delta)
+    public required Sprite2D Sprite { get; init; }
+    public required IObservable<Unit> OnProcess { get; init; }
+
+    public void Initialize()
     {
-        Sprite.Position += new Vector2(0, 10);
+        OnProcess.Subscribe(_ => Sprite.Position += Vector2.Down * 10);
     }
 }

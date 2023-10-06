@@ -1,12 +1,21 @@
 <Project Sdk="Godot.NET.Sdk/4.1.1">
+  
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj" />
   </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="System.Reactive" Version="6.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="ContextToAttach.cs" />
+    <Compile Include="Root.cs" />
   </ItemGroup>
 </Project>

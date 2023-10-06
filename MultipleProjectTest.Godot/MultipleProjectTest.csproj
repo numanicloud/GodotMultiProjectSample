@@ -15,7 +15,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Include="ContextToAttach.cs" />
+    <Compile Include="ContextClone.cs" />
     <Compile Include="Root.cs" />
   </ItemGroup>
 </Project>

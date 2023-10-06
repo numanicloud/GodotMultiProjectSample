@@ -2,13 +2,12 @@
 
 [ext_resource type="Script" path="res://Root.cs" id="1_cgtps"]
 [ext_resource type="Texture2D" uid="uid://bqpnws3j6fa86" path="res://NewYear2017.png" id="1_iww3n"]
-[ext_resource type="Script" path="res://ContextToAttach.cs" id="3_phyy1"]
+[ext_resource type="Script" path="res://ClassLibrary1/Context.cs" id="3_1h1e3"]
 
 [node name="Node2D" type="Node2D" node_paths=PackedStringArray("_context")]
 script = ExtResource("1_cgtps")
 _context = NodePath("Sprite2D")
 
-[node name="Sprite2D" type="Sprite2D" parent="." node_paths=PackedStringArray("Sprite")]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_iww3n")
-script = ExtResource("3_phyy1")
-Sprite = NodePath(".")
+script = ExtResource("3_1h1e3")
